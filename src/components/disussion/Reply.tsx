@@ -1,10 +1,11 @@
+import { ReactComponent as HandThumbsUpFill } from '../../assets/icons/hand-thumbs-up-fill.svg';
 import { ReactComponent as HandThumbsUp } from '../../assets/icons/hand-thumbs-up.svg';
 import IComment from '../../models/IComment';
 import '../../assets/scss/reply.scss';
 
 function Reply(props: IComment): JSX.Element {
   return (
-    <div className="comment">
+    <div className="comment comment-reply">
       {/* head */}
       <div className="comment-head">
         <div className="comment-head-name">
@@ -20,15 +21,9 @@ function Reply(props: IComment): JSX.Element {
       {/* body */}
       <div className="comment-body">
         <p className="comment-body-text">{props.text}</p>
-        <button
-          className={`comment-body-likeBtn ${
-            props.iLikedIt ? 'comment-body-likeBtn-active' : ''
-          }`}
-        >
-          {' '}
-          {/* comment-btn-active */}
-          45
-          <HandThumbsUp className="comment-body-likeBtn-icon" />
+        <button className={`comment-body-likeBtn`}>
+          {props.likes} &nbsp;{' '}
+          {props.iLikedIt ? <HandThumbsUpFill /> : <HandThumbsUp />}
         </button>
       </div>
     </div>

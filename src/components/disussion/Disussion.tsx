@@ -8,13 +8,6 @@ interface Iprops {
 }
 
 function Disussion({ discussions }: Iprops): JSX.Element {
-  // send comment handle
-  function sendComment() {
-    /**
-     * send comment codes will be here
-     */
-  }
-
   return (
     <div className="disussion">
       {/* title */}
@@ -23,7 +16,7 @@ function Disussion({ discussions }: Iprops): JSX.Element {
       </h3>
 
       {/* send comment */}
-      <SendComment isReply={false} onSend={sendComment} />
+      <SendComment isReply={false} />
 
       {/* comment list */}
       {discussions.map((discussion) => (

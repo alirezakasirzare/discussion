@@ -1,20 +1,19 @@
 import '../../assets/scss/comment.scss';
 import { ReactComponent as HandThumbsUp } from '../../assets/icons/hand-thumbs-up.svg';
+import { ReactComponent as HandThumbsUpFill } from '../../assets/icons/hand-thumbs-up-fill.svg';
+import { ReactComponent as ReplyIcon } from '../../assets/icons/reply.svg';
+import { ReactComponent as ReplyFillIcon } from '../../assets/icons/reply-fill.svg';
 import IDiscussion from '../../models/IDiscussion';
 import Reply from './Reply';
 import { useState } from 'react';
 import SendComment from './SendComment';
+import profileImage from '../../assets/img/profile.png';
 
 function Comment(props: IDiscussion): JSX.Element {
   // reply
   const [wantSendReply, setWantSendReply] = useState<boolean>(false);
   function toggleReplyForm() {
     setWantSendReply((prevState) => !prevState);
-  }
-  function handleSendReply() {
-    /**
-     * send reply codes will be here
-     */
   }
 
   return (
@@ -23,7 +22,7 @@ function Comment(props: IDiscussion): JSX.Element {
       <div className="comment-head">
         <div className="comment-head-name">
           <img
-            src={props.user.avatar}
+            src={props.user.avatar || profileImage}
             alt={props.user.name}
             className="comment-head-name-img"
           />
@@ -34,23 +33,20 @@ function Comment(props: IDiscussion): JSX.Element {
       {/* body */}
       <div className="comment-body">
         <p className="comment-body-text">{props.text}</p>
-        <button
-          className={`comment-body-likeBtn ${
-            props.iLikedIt ? 'comment-body-likeBtn-active' : ''
-          }`}
-        >
-          45
-          <HandThumbsUp className="comment-body-likeBtn-icon" />
+        <button className={`comment-body-likeBtn`}>
+          {props.likes} &nbsp;{' '}
+          {props.iLikedIt ? <HandThumbsUpFill /> : <HandThumbsUp />}
         </button>
 
         <button className="comment-body-replyBtn" onClick={toggleReplyForm}>
-          reply
+          reply &nbsp;
+          {wantSendReply ? <ReplyFillIcon /> : <ReplyIcon />}
         </button>
 
         {/* reply form */}
         {wantSendReply && (
           <div className="comment-body-form">
-            <SendComment onSend={handleSendReply} isReply />
+            <SendComment isReply />
           </div>
         )}
 

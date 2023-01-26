@@ -1,0 +1,10 @@
+@import './models/colors.scss';
+
+.comment-reply {
+  .comment-body-likeBtn {
+    background-color: $grey-100;
+    &:hover {
+      background-color: $grey-300;
+    }
+  }
+}

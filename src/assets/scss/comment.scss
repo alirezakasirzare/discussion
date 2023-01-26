@@ -22,7 +22,7 @@
       &-img {
         width: 45px;
         height: 45px;
-        border: 3px solid $blue-400;
+        border: 3px solid $grey-400;
         border-radius: 50%;
         margin-right: 5px;
       }
@@ -47,29 +47,19 @@
 
     &-likeBtn {
       display: inline-flex;
-      border-radius: 2px;
+      border-radius: 15px;
       padding: 5px 10px;
       border: none;
       justify-content: center;
       align-items: center;
-      background-color: $grey-100;
+      background-color: $grey-200;
       color: $blue-700;
-      border: 1px solid $blue-700;
       transition: all ease 0.3s;
       margin-right: 5px;
       cursor: pointer;
 
-      &-active {
-        color: $grey-100;
-        background-color: $blue-700;
-
-        &:hover {
-          background-color: $blue-600 !important;
-        }
-      }
-
       &:hover {
-        background-color: $blue-100;
+        background-color: $grey-300;
       }
 
       &-icon {
@@ -79,16 +69,20 @@
 
     &-replyBtn {
       display: inline-flex;
-      border-radius: 2px;
+      border-radius: 15px;
       padding: 5px 10px;
       border: none;
       justify-content: center;
       align-items: center;
-      background-color: $grey-100;
+      background-color: $grey-200;
       color: $blue-700;
-      border: 1px solid $blue-700;
       transition: all ease 0.3s;
+      margin-right: 5px;
       cursor: pointer;
+
+      &:hover {
+        background-color: $grey-300;
+      }
     }
 
     &-reply {

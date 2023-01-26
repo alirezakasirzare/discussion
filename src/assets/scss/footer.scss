@@ -3,9 +3,15 @@
 .main-footer {
   background-image: linear-gradient($blue-500, $blue-400);
   color: $grey-100;
-  text-align: center;
   padding: 20px;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-icon {
+    margin: 0 5px;
+  }
 
   &-link {
     color: $grey-100;
