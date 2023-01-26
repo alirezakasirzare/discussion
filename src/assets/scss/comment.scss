@@ -3,6 +3,11 @@
 .comment {
   border-bottom: 1px solid $grey-300;
   padding: 15px 0;
+
+  &:last-child {
+    border: none;
+  }
+
   &-head {
     display: flex;
     justify-content: space-between;
@@ -33,56 +38,68 @@
     }
   }
 
-  &-text {
-    &-content {
+  &-body {
+    &-text {
       margin-bottom: 5px;
+      color: $grey-900;
     }
     padding: 0 10px;
-  }
 
-  &-like {
-    display: inline-flex;
-    border-radius: 2px;
-    padding: 5px 10px;
-    border: none;
-    justify-content: center;
-    align-items: center;
-    background-color: $grey-100;
-    color: $blue-700;
-    border: 1px solid $blue-700;
-    transition: all ease 0.3s;
-    margin-right: 5px;
-    cursor: pointer;
+    &-likeBtn {
+      display: inline-flex;
+      border-radius: 2px;
+      padding: 5px 10px;
+      border: none;
+      justify-content: center;
+      align-items: center;
+      background-color: $grey-100;
+      color: $blue-700;
+      border: 1px solid $blue-700;
+      transition: all ease 0.3s;
+      margin-right: 5px;
+      cursor: pointer;
 
-    &-active {
-      color: $grey-100;
-      background-color: $blue-700;
+      &-active {
+        color: $grey-100;
+        background-color: $blue-700;
+
+        &:hover {
+          background-color: $blue-600 !important;
+        }
+      }
 
       &:hover {
-        background-color: $blue-600 !important;
+        background-color: $blue-100;
+      }
+
+      &-icon {
+        margin-left: 5px;
       }
     }
 
-    &:hover {
-      background-color: $blue-100;
+    &-replyBtn {
+      display: inline-flex;
+      border-radius: 2px;
+      padding: 5px 10px;
+      border: none;
+      justify-content: center;
+      align-items: center;
+      background-color: $grey-100;
+      color: $blue-700;
+      border: 1px solid $blue-700;
+      transition: all ease 0.3s;
+      cursor: pointer;
     }
 
-    &-icon {
-      margin-left: 5px;
+    &-reply {
+      background-color: $grey-200;
+      margin-top: 20px;
+      border-radius: 2px;
+      padding: 10px;
     }
-  }
 
-  &-reply {
-    display: inline-flex;
-    border-radius: 2px;
-    padding: 5px 10px;
-    border: none;
-    justify-content: center;
-    align-items: center;
-    background-color: $grey-100;
-    color: $blue-700;
-    border: 1px solid $blue-700;
-    transition: all ease 0.3s;
-    cursor: pointer;
+    .comment-body-form {
+      margin-top: 10px;
+    }
   }
 }
