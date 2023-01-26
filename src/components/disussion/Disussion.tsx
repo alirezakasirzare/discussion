@@ -1,6 +1,14 @@
 import '../../assets/scss/disussion.scss';
+import SendComment from './SendComment';
 
 function Disussion(): JSX.Element {
+  // send comment handle
+  function sendComment() {
+    /**
+     * send comment codes will be here
+     */
+  }
+
   return (
     <div className="disussion">
       {/* title */}
@@ -9,10 +17,10 @@ function Disussion(): JSX.Element {
       </h3>
 
       {/* send comment */}
-      <div className="send-comment">
-        <textarea></textarea>
-        <button>submit</button>
-      </div>
+      <SendComment isReply={false} onSend={sendComment} />
+
+      {/* comment list */}
+      {/* <Comment /> */}
     </div>
   );
 }
