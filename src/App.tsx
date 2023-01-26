@@ -1,5 +1,11 @@
-function App() {
-  return <div className="App">test</div>;
+import Header from './components/header';
+
+function App(): JSX.Element {
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
 
 export default App;
