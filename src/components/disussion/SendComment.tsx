@@ -14,7 +14,9 @@ function SendComment(props: Iprops): JSX.Element {
         className="send-comment-input"
         placeholder={placeholder}
       ></textarea>
-      <button className="send-comment-btn">send</button>
+      <button className="send-comment-btn" onClick={props.onSend}>
+        send
+      </button>
     </div>
   );
 }

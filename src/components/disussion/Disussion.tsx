@@ -1,7 +1,13 @@
 import '../../assets/scss/disussion.scss';
+import IDiscussion from '../../models/IDiscussion';
+import Comment from './Comment';
 import SendComment from './SendComment';
 
-function Disussion(): JSX.Element {
+interface Iprops {
+  discussions: IDiscussion[];
+}
+
+function Disussion({ discussions }: Iprops): JSX.Element {
   // send comment handle
   function sendComment() {
     /**
@@ -20,7 +26,9 @@ function Disussion(): JSX.Element {
       <SendComment isReply={false} onSend={sendComment} />
 
       {/* comment list */}
-      {/* <Comment /> */}
+      {discussions.map((discussion) => (
+        <Comment key={discussion.id} {...discussion} />
+      ))}
     </div>
   );
 }
