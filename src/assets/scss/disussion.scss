@@ -1,0 +1,32 @@
+@import 'models/colors';
+
+.disussion {
+  background-color: $grey-100;
+  color: $grey-900;
+  padding: 20px;
+  border-radius: 2px;
+
+  &-title {
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+
+    &-text {
+      position: relative;
+      color: $grey-700;
+      background-color: $grey-100;
+      padding: 0 15px;
+      z-index: 1;
+    }
+    &::after {
+      content: '';
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: $grey-300;
+    }
+  }
+}

@@ -1,9 +1,9 @@
 @import 'models/colors.scss';
 
 .main-header {
-  background-color: $grey-200;
-  color: $grey-900;
+  background-image: linear-gradient($blue-400, $blue-500);
+  color: $grey-100;
   text-align: center;
   padding: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }

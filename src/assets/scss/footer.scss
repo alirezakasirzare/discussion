@@ -1,13 +1,13 @@
 @import 'models/colors.scss';
 
 .main-footer {
-  background-color: $grey-200;
-  color: $grey-900;
+  background-image: linear-gradient($blue-500, $blue-400);
+  color: $grey-100;
   text-align: center;
   padding: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
 
   &-link {
-    color: $blue-500;
+    color: $grey-100;
   }
 }
