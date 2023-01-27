@@ -1,4 +1,5 @@
 @import './models/colors.scss';
+@import './models/button.scss';
 
 .comment {
   border-bottom: 1px solid $grey-300;
@@ -55,21 +56,11 @@
     padding: 0 10px;
 
     &-likeBtn {
-      display: inline-flex;
+      @extend .btn;
+      @extend .btn-secondary;
       border-radius: 15px;
       padding: 5px 10px;
-      border: none;
-      justify-content: center;
-      align-items: center;
-      background-color: $grey-200;
-      color: $blue-700;
-      transition: all ease 0.3s;
       margin-right: 5px;
-      cursor: pointer;
-
-      &:hover {
-        background-color: $grey-300;
-      }
 
       &-icon {
         margin-left: 5px;
@@ -77,21 +68,11 @@
     }
 
     &-replyBtn {
-      display: inline-flex;
+      @extend .btn;
+      @extend .btn-secondary;
       border-radius: 15px;
       padding: 5px 10px;
-      border: none;
-      justify-content: center;
-      align-items: center;
-      background-color: $grey-200;
-      color: $blue-700;
-      transition: all ease 0.3s;
       margin-right: 5px;
-      cursor: pointer;
-
-      &:hover {
-        background-color: $grey-300;
-      }
     }
 
     &-reply {

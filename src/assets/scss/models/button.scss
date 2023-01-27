@@ -1,0 +1,35 @@
+.btn {
+  display: inline-flex;
+  border-radius: 2px;
+  padding: 10px 20px;
+  border: none;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary {
+  color: $grey-100;
+  background-color: $blue-700;
+  &:hover {
+    background-color: $blue-500;
+  }
+
+  &:focus {
+    outline-color: $blue-300;
+  }
+}
+
+.btn-secondary {
+  background-color: $grey-200;
+  color: $blue-700;
+
+  &:hover {
+    background-color: $grey-300;
+  }
+
+  &:focus {
+    outline-color: $grey-400;
+  }
+}

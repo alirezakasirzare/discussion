@@ -1,4 +1,6 @@
+@import './models/responsive.scss';
 @import './models/colors.scss';
+@import './models/button.scss';
 
 .send-comment {
   margin-bottom: 20px;
@@ -27,17 +29,12 @@
   }
 
   &-btn {
-    display: block;
-    border-radius: 2px;
-    color: $grey-100;
-    padding: 10px 20px;
-    border: none;
-    background-color: $blue-700;
-    transition: all ease 0.3s;
-    cursor: pointer;
+    @extend .btn;
+    @extend .btn-primary;
 
-    &:hover {
-      background-color: $blue-500;
+    width: 100%;
+    @include responsive('sm') {
+      width: auto;
     }
   }
 }

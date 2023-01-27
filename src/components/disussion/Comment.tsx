@@ -21,6 +21,9 @@ function Comment(props: IProps): JSX.Element {
     setWantSendReply((prevState) => !prevState);
   }
 
+  // date
+  const commnetDate = new Date(props.date).toLocaleDateString();
+
   return (
     <div className={`comment ${props.isReply ? 'comment-reply' : ''}`}>
       {/* head */}
@@ -33,7 +36,7 @@ function Comment(props: IProps): JSX.Element {
           />
           <strong className="comment-head-name-text">{props.user.name}</strong>
         </div>
-        <i className="comment-head-date">1234/12/12</i>
+        <i className="comment-head-date">{commnetDate}</i>
       </div>
       {/* body */}
       <div className="comment-body">

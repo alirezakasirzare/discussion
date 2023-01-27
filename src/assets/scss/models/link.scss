@@ -1,0 +1,11 @@
+.link-light {
+  color: $grey-100;
+
+  &:hover {
+    color: $grey-300;
+  }
+
+  &:focus {
+    outline-color: $grey-100;
+  }
+}

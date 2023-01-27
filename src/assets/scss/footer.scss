@@ -1,4 +1,5 @@
 @import 'models/colors.scss';
+@import 'models/link.scss';
 
 .main-footer {
   background-image: linear-gradient($blue-500, $blue-400);
@@ -14,6 +15,6 @@
   }
 
   &-link {
-    color: $grey-100;
+    @extend .link-light;
   }
 }

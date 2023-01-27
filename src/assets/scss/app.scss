@@ -1,4 +1,22 @@
+@import './models/responsive.scss';
+
 .container {
-  max-width: 1200px;
   margin: auto;
+  padding: 0 10px;
+
+  @include responsive('sm') {
+    max-width: map-get($breakpoints, 'sm');
+  }
+
+  @include responsive('md') {
+    max-width: map-get($breakpoints, 'md');
+  }
+
+  @include responsive('lg') {
+    max-width: map-get($breakpoints, 'lg');
+  }
+
+  @include responsive('xl') {
+    max-width: map-get($breakpoints, 'xl');
+  }
 }
