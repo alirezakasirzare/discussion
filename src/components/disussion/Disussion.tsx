@@ -20,7 +20,7 @@ function Disussion({ discussions }: Iprops): JSX.Element {
 
       {/* comment list */}
       {discussions.map((discussion) => (
-        <Comment key={discussion.id} {...discussion} />
+        <Comment key={discussion.id} {...discussion} isReply={false} />
       ))}
     </div>
   );

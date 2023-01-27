@@ -8,6 +8,15 @@
     border: none;
   }
 
+  &.comment-reply {
+    .comment-body-likeBtn {
+      background-color: $grey-100;
+      &:hover {
+        background-color: $grey-300;
+      }
+    }
+  }
+
   &-head {
     display: flex;
     justify-content: space-between;
