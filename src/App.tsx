@@ -1,6 +1,6 @@
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Disussion from './components/disussion/Disussion';
+import Discussion from './components/discussion/Discussion';
 import './assets/scss/app.scss';
 import discussions from './data/discussions';
 
@@ -9,7 +9,7 @@ function App(): JSX.Element {
     <div>
       <Header />
       <main className="container">
-        <Disussion discussions={discussions} />
+        <Discussion discussions={discussions} />
       </main>
       <Footer />
     </div>

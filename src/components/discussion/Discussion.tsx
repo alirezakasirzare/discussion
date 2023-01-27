@@ -1,4 +1,4 @@
-import '../../assets/scss/disussion.scss';
+import '../../assets/scss/discussion.scss';
 import IDiscussion from '../../models/IDiscussion';
 import Comment from './Comment';
 import SendComment from './SendComment';
